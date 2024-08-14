@@ -10,7 +10,7 @@ export function Header() {
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
           <h1 className="text-4xl font-semibold">
-            Diogo J<span className="text-accent">.</span>
+            D<span className="text-accent">.</span> Barcelos
           </h1>
         </Link>
 

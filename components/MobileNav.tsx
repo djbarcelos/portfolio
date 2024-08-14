@@ -32,7 +32,7 @@ export function MobileNav() {
       <SheetContent className="flex flex-col">
         <div className="mt-32 mb-40 text-center text-2xl">
           <h1>
-            Diogo J <span className="text-accent">.</span>
+            D<span className="text-accent">.</span> Barcelos
           </h1>
         </div>
 
