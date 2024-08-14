@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { JetBrains_Mono } from 'next/font/google'
+import { JetBrains_Mono as jetBrainsMono } from 'next/font/google'
 import './globals.css'
 
 // Components
 import { Header } from '@/components/Header'
 import { PageTransition } from '@/components/PageTransition'
 
-const jetbrainsMono = JetBrains_Mono({
+const jetbrainsMono = jetBrainsMono({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
   variable: '--font-jetbrainsMono',
