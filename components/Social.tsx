@@ -14,9 +14,15 @@ type SocialProps = {
 }
 
 const socials: SocialItem[] = [
-  { icon: <FaGithub />, path: '' },
-  { icon: <FaLinkedinIn />, path: '' },
-  { icon: <BiLogoGmail />, path: '' },
+  { icon: <FaGithub />, path: 'https://github.com/djbarcelos' },
+  {
+    icon: <FaLinkedinIn />,
+    path: 'https://www.linkedin.com/in/diogojorgegrijobarcelos/',
+  },
+  {
+    icon: <BiLogoGmail />,
+    path: `https://mail.google.com/mail/?view=cm&to=diogobarcelos94@gmail.com&su=Assunto%20do%20E-mail&body=Escreva%20aqui%20o%20conteúdo%20do%20seu%20e-mail`,
+  },
 ]
 
 export function Social(props: SocialProps) {
@@ -25,7 +31,12 @@ export function Social(props: SocialProps) {
     <div className={containerStyles}>
       {socials.map((item, index) => {
         return (
-          <Link key={index} href={item.path} className={iconStyles}>
+          <Link
+            key={index}
+            href={item.path}
+            className={iconStyles}
+            target="_blank"
+          >
             {item.icon}
           </Link>
         )

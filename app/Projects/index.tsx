@@ -30,25 +30,43 @@ interface Projects {
 const projects: Projects[] = [
   {
     num: '01',
-    category: 'frontend',
-    title: 'Projeto 1',
-    description: 'descrição do projeto um.',
-    stack: ['React.js', 'JavaScript.js'],
-    image:
-      'https://raw.githubusercontent.com/manuncorrea/search-for-the-fipe-table/Emanuele/public/screenshot.png',
-    live: '',
-    github: '',
+    category: 'Front-end',
+    title: 'Pomodoro Timer',
+    description: `Uma aplicação de cronômetro para aplicar a técnica Pomodoro, que lista todas as contagens e suas respectivas situações.`,
+    stack: ['React.js', 'Typescript', 'Styled-Components', 'Vite'],
+    image: '/assets/timer.png',
+    live: 'https://ignite-timer-iota-nine.vercel.app/',
+    github: 'https://github.com/djbarcelos/ignite-timer',
   },
   {
     num: '02',
-    category: 'frontend',
-    title: 'Projeto 2',
-    description: 'descrição do projeto dois.',
-    stack: ['React.js', 'Typescript'],
-    image:
-      'https://raw.githubusercontent.com/manuncorrea/search-for-the-fipe-table/Emanuele/public/screenshot.png',
-    live: '',
-    github: '',
+    category: 'Front-end',
+    title: 'Lista de Tarefas',
+    description: `Aplicação To-Do: é uma lista de tarefas que permite adicionar, remover e marcar itens como concluídos.`,
+    stack: ['React.js', 'Typescript', 'Vite'],
+    image: '/assets/to-do.png',
+    live: 'https://to-do-list-project-reactjs-ts.vercel.app/',
+    github: 'https://github.com/djbarcelos/to-do-list-project-reactjs-ts',
+  },
+  {
+    num: '03',
+    category: 'Front-end',
+    title: 'Portfólio',
+    description: `Site de apresentação pessoal, com uma lista das minhas habilidades e exibição dos meus projetos.`,
+    stack: ['React.js', 'Next.js', 'Tailwindcss', 'Typescript'],
+    image: '/assets/portfolio.png',
+    live: 'https://diogo-jorge.vercel.app/',
+    github: 'https://github.com/djbarcelos/portfolio',
+  },
+  {
+    num: '04',
+    category: 'Front-end',
+    title: 'Projeto Feed',
+    description: `A aplicação tem como objetivo possibilitar a publicação de comentários em postagens realizadas por usuários em uma rede social.`,
+    stack: ['React.js', 'Vite'],
+    image: '/assets/ignite-feed.png',
+    live: 'https://project-ignite-react.vercel.app/',
+    github: 'https://github.com/djbarcelos/project-ignite',
   },
 ]
 
@@ -110,7 +128,7 @@ export function Projects() {
                 {/* buttons */}
                 <div className="flex items-center gap-4">
                   {/* Live */}
-                  <Link href={project.live}>
+                  <Link href={project.live} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -123,7 +141,7 @@ export function Projects() {
                     </TooltipProvider>
                   </Link>
                   {/* Git */}
-                  <Link href={project.github}>
+                  <Link href={project.github} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
