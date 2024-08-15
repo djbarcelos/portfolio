@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button'
 import { FiDownload } from 'react-icons/fi'
 import { Social } from '@/components/Social'
 import { Photo } from '@/components/Photo'
-import { Stats } from '@/components/Stats'
+import { Skills } from '@/components/Skills'
+import { Projects } from './Projects'
 
 function Home() {
   return (
@@ -43,7 +44,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <Stats />
+      <Skills />
+      <Projects />
     </section>
   )
 }

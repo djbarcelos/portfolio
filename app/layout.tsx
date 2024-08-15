@@ -3,8 +3,8 @@ import { JetBrains_Mono as jetBrainsMono } from 'next/font/google'
 import './globals.css'
 
 // Components
-import { Header } from '@/components/Header'
-import { PageTransition } from '@/components/PageTransition'
+import { Header } from '@/components/layout/Header'
+import { PageTransition } from '@/components/utils/PageTransition'
 
 const jetbrainsMono = jetBrainsMono({
   subsets: ['latin'],
