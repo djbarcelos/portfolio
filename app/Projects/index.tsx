@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper as SwiperClass } from 'swiper'
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -13,8 +14,20 @@ import {
 } from '@/components/ui/tooltip'
 
 import 'swiper/css'
+import { WorkSliderBtns } from '@/components/layout/WorkSliderBtns'
 
-const projects = [
+interface Projects {
+  num: string
+  category: string
+  title: string
+  description: string
+  stack: string[]
+  image: string
+  live: string
+  github: string
+}
+
+const projects: Projects[] = [
   {
     num: '01',
     category: 'frontend',
@@ -42,8 +55,7 @@ const projects = [
 export function Projects() {
   const [project, setProject] = useState(projects[0])
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  function handleSlideChange(swiper: any) {
+  function handleSlideChange(swiper: SwiperClass) {
     const currentIndex = swiper.activeIndex
     setProject(projects[currentIndex])
   }
@@ -53,7 +65,10 @@ export function Projects() {
       id="projetos"
       className="pt-4 pb-12 xl:pt-4 xl:pb-12"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 1.4, duration: 0.4, ease: 'easeIn' },
+      }}
     >
       <div className="container mx-auto">
         {/* page title */}
@@ -61,7 +76,7 @@ export function Projects() {
           <h3 className="text-4xl font-bold xl:text-4xl">Meus Projetos</h3>
         </div>
         {/* initial of page */}
-        <div className=" min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
+        <div className="min-h-[60vh] flex flex-col justify-center py-12 xl:px-0">
           <div className="flex flex-col xl:flex-row xl:gap-[30px]">
             {/* info */}
             <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
@@ -134,13 +149,13 @@ export function Projects() {
                 {projects.map((project, index) => {
                   return (
                     <SwiperSlide key={index} className="w-full">
-                      <div className="h-[18rem] xl:h-[28rem] relative group flex justify-center items-center bg-pink-50/20">
-                        <div></div>
+                      <div className="h-[18rem] xl:h-[28rem] relative group flex justify-center items-center bg-pink-50/20 rounded-2xl">
+                        <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                         <div className="relative w-full h-full">
                           <Image
                             src={project.image}
                             fill
-                            className="object-cover"
+                            className="object-cover rounded-2xl"
                             alt=""
                           ></Image>
                         </div>
@@ -148,6 +163,11 @@ export function Projects() {
                     </SwiperSlide>
                   )
                 })}
+                {/* Slider button */}
+                <WorkSliderBtns
+                  containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] z-20 w-full justify-between xl:bottom-[50%]" // xl:bottom-0 xl:w-max xl:justify-none
+                  btnStyles="bg-accent/80 hover:bg-accent text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition--all text-white/50 mx-2 rounded"
+                />
               </Swiper>
             </div>
           </div>

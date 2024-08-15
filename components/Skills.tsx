@@ -46,7 +46,7 @@ const skills = [
 
 export function Skills() {
   return (
-    <section id="skills" className="pt-4 pb-12 xl:pt-0 xl:pb-12">
+    <section id="skills" className="pt-4 pb-12 xl:pt-4 xl:pb-16">
       <div className="container mx-auto">
         <div className="flex flex-col gap-[30px]">
           <div className="text-center xl:text-left">

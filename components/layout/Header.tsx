@@ -16,8 +16,11 @@ export function Header() {
 
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href="#skills">
-            <Button>Hire Me</Button>
+          <Link
+            href="https://www.linkedin.com/in/diogojorgegrijobarcelos/"
+            target="_blank"
+          >
+            <Button>Contrate-me</Button>
           </Link>
         </div>
 

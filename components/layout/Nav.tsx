@@ -13,10 +13,6 @@ const links = [
     name: 'projetos',
     path: '#projetos',
   },
-  {
-    name: 'contato',
-    path: '#contato',
-  },
 ]
 
 export function Nav() {
