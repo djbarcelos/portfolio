@@ -7,10 +7,12 @@ import { Photo } from '@/components/Photo'
 
 const info = {
   name: 'Diogo Jorge',
-  description: `Desenvolvedor Full Stack com experiência em React, TypeScript e
-              Node.js. Apaixonado por desafios e inovação, busco oportunidades
-              para aplicar minhas habilidades em projetos impactantes e crescer
-              profissionalmente.`,
+  description: `Com uma experiência sólida em React, TypeScript e Node.js, 
+  estou sempre buscando desafios que estimulem minha criatividade e inovação. 
+  Meu entusiasmo em explorar novas tecnologias e enfrentar problemas me impulsiona
+  a buscar oportunidades que permitam aplicar minhas habilidades. 
+  Estou comprometido com meu crescimento profissional e com o sucesso das iniciativas 
+  em que me envolvo.`,
   linkCv: '/docs/Currículo-Diogo_Jorge-2024.pdf',
 }
 
